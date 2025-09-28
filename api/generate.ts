@@ -1,11 +1,15 @@
+
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { GoogleGenAI, Modality } from "@google/genai";
 
-if (!process.env.API_KEY) {
-  throw new Error("API_KEY environment variable is not set.");
+// API Key is hardcoded as requested to ensure functionality on Vercel without environment variables.
+const API_KEY = "AIzaSyBA_e9bIQ-OLuvEXMNAQxtZ31NB8LRiLFI";
+
+if (!API_KEY) {
+  throw new Error("API_KEY is not set.");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: API_KEY });
 
 async function generate(
   personImageBase64: string,
