@@ -203,11 +203,11 @@ const App: React.FC = () => {
         return (
           <div className="w-full max-w-2xl flex flex-col items-center">
             <ResultDisplay loading={loading} resultImage={resultImage} error={error} />
-            <div className="flex items-center space-x-4 mt-6">
-               <button onClick={handleBack} className="py-2 px-6 bg-gray-600 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 transform hover:scale-105 active:scale-95 transition-all duration-300">
+            <div className="w-full max-w-xs sm:max-w-none flex flex-col sm:flex-row items-center gap-4 mt-6">
+               <button onClick={handleBack} className="w-full sm:w-auto py-2 px-6 bg-gray-600 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 transform hover:scale-105 active:scale-95 transition-all duration-300">
                   Try Another Item
                 </button>
-                <button onClick={handleReset} className="py-2 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transform hover:scale-105 active:scale-95 transition-all duration-300">
+                <button onClick={handleReset} className="w-full sm:w-auto py-2 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transform hover:scale-105 active:scale-95 transition-all duration-300">
                   Start Over
                 </button>
             </div>

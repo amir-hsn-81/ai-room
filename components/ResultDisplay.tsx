@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface ResultDisplayProps {
@@ -45,7 +46,7 @@ export const ResultDisplay: React.FC<ResultDisplayProps> = ({ loading, resultIma
       return (
         <div className="w-full h-full relative group">
           <img src={resultImage} alt="Generated result" className="w-full h-full max-h-[70vh] object-contain rounded-lg" />
-          <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute bottom-4 right-4 transition-opacity duration-300">
              <button
                 onClick={handleDownload}
                 className="flex items-center justify-center py-2 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transform hover:scale-105 active:scale-95 transition-all duration-300"
