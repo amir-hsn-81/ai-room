@@ -2,11 +2,13 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { GoogleGenAI, Modality } from "@google/genai";
 
-// API Key is hardcoded as requested to ensure functionality on Vercel without environment variables.
-const API_KEY = "AIzaSyBA_e9bIQ-OLuvEXMNAQxtZ31NB8LRiLFI";
+// Securely access the API key from Vercel's environment variables.
+// The user MUST set this in their Vercel project settings.
+const API_KEY = process.env.API_KEY;
 
 if (!API_KEY) {
-  throw new Error("API_KEY is not set.");
+  // This error will be visible in the Vercel function logs if the variable is not set.
+  throw new Error("API_KEY environment variable is not set.");
 }
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
