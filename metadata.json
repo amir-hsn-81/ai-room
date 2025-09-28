@@ -1,0 +1,7 @@
+{
+  "name": "Virtual Try-On Studio",
+  "description": "An application for a clothing store, fitting room, and hairdresser that allows users to upload a photo of themselves and an item (clothing, hairstyle, etc.) to see a virtual preview of how it would look.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
